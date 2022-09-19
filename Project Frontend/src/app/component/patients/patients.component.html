@@ -1,0 +1,48 @@
+<section class="bg-secondary text-light p-3">
+  <i class="bi bi-people-fill me-1"></i>Patient Dashboard
+</section>
+<div class="bg-light d-flex justify-content-end mb-3">
+  <form>
+    <div class="form-group p-3 d-flex">
+      <input
+        type="text"
+        class="form-control me-2"
+        name="key"
+        (input)="onSearch()"
+        [(ngModel)]="key"
+        placeholder="Search Patients"
+      />
+      <button class="btn btn-success" (click)="onSearch()">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="bg-warning p-2 h5">Patients</div>
+  <table class="table table-striped">
+    <thead class="thead table-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Visited Doctor</th>
+        <th scope="col">Date of Visit</th>
+        <th scope="col">Prescription</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pat of patients">
+        <th scope="row">{{ pat.patientId }}</th>
+        <td>{{ pat.name }}</td>
+        <td>{{ pat.visitedDoctor }}</td>
+        <td>{{ pat.dateOfVisit | date }}</td>
+        <td>{{ pat.prescription }}</td>
+        <td class="text-center">
+          <a (click)="onDetails(pat.patientId)" class="btn btn-sm btn-secondary"
+            >Details</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

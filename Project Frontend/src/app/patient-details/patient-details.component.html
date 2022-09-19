@@ -1,0 +1,19 @@
+<section class="bg-secondary text-light p-3 mb-4">
+  <i class="bi bi-person-circle me-1"></i>Patient Details
+</section>
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header bg-warning">Patient Name : {{ patient.name }}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Visitied Doctor:</h5>
+      <p class="card-text">{{ patient.visitedDoctor }}</p>
+      <h5 class="card-title">Data of Visit</h5>
+      <p class="card-text">{{ patient.dateOfVisit }}</p>
+      <h5 class="card-title">Prescriptions :</h5>
+      <p class="card-text">{{ patient.prescription }}</p>
+
+      <a routerLink="/" class="btn btn-success">Back</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+<section class="vh-100" style="background-color: rgb(144, 199, 205)">
+  <div class="container h-60">
+    <div class="row d-flex justify-content-center align-items-center h-20">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px">
+          <div class="card-body p-md-3">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p
+                  class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"
+                  style="
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                      'Trebuchet MS', sans-serif;
+                  "
+                >
+                  <mark>Create Doctor</mark>
+                </p>
+
+                <form class="mx-1 mx-md-4" ngValidate>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label for="name" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        required
+                        [(ngModel)]="doctor.name"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label for="age" class="form-label">Age</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        required
+                        name="age"
+                        [(ngModel)]="doctor.age"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label for="speciality">Speciality</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        required=""
+                        name="specilaity"
+                        [(ngModel)]="doctor.speciality"
+                        placeholder="neurologist"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <p>Gender</p>
+                      <input
+                        class="form-check-input mx-0"
+                        type="radio"
+                        required
+                        name="gender"
+                        value="m"
+                        [(ngModel)]="doctor.gender"
+                      />
+                      <label class="form-check-label mx-4" for="gender">
+                        Male
+                      </label>
+                      <input
+                        class="form-check-input mx-0"
+                        type="radio"
+                        required
+                        name="gender"
+                        value="f"
+                        [(ngModel)]="doctor.gender"
+                      />
+                      <label class="form-check-label mx-4" for="gender">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-between mb-3">
+                    <input
+                      class="form-check-input mx-0"
+                      type="checkbox"
+                      value=""
+                      id="form2Example3c"
+                    />
+                    <label class="form-check-label ml-4" for="form2Example3">
+                      I agree all statements in
+                      <a href="#!">Terms of service</a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-3 mb-2 mb-lg-3">
+                    <button
+                      type="submit"
+                      (click)="onSubmit()"
+                      class="mt-3 btn btn-success"
+                    >
+                      Add Doctor
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="../../../assets/doctor2.jpg"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
